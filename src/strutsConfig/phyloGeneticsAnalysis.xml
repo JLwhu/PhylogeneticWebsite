@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="phyloGeneticsAnalysis" extends="json-default">
+		<global-results>
+			<result name="error">/pages/include/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="SystemException" result="error" />
+			<exception-mapping exception="java.lang.Exception" result="error" />
+		</global-exception-mappings>
+		
+		<action name="subtreeExtraction" class="web.action.SubtreeExtractionAction"
+			method="subtreeExtraction">
+			<param name="fileSavePath">/temp/upload</param>
+			<param name="outTreFileName">subtree.tre</param>
+			<param name="mainTreeImageFileName">maintree.jpg</param>
+			<param name="subTreeImageFileName">subtree.jpg</param>
+			<result>/pages/phyloAnalysis/subtreeExtraction.jsp</result>
+			<result name="input">/pages/phyloAnalysis/subtreeExtraction.jsp</result>
+			<result type="json">
+        		<param name="excludeProperties">
+        			uploadFile, uploadFileFileName, uploadFileContentType,
+        			nameChoice, inputChoice, subtreeExtractionService, palTreeService
+        		</param>
+			</result>
+		</action>
+		
+		
+		<action name="showSubtreeExtractionResult" class="web.action.SubtreeExtractionResultAction">
+			<result name="success">/pages/phyloAnalysis/subtreeExtractionResult.jsp</result>
+		</action>
+		
+		
+		<action name="subSequenceMapExtraction" class="web.action.SubSequenceMapAction"
+			method="subSequenceMapExtraction">
+			<param name="fileSavePath">/temp/upload</param>
+			<param name="outTreFileName">subtree.tre</param>
+			<result>/pages/phyloAnalysis/subSequenceMapExtraction.jsp</result>
+			<result name="input">/pages/phyloAnalysis/subSequenceMapExtraction.jsp</result>
+			<result type="json">
+        		<param name="excludeProperties">
+        			uploadFile, uploadFileFileName, uploadFileContentType,
+        			subSequenceMapExtractionService, fileSavePath
+        		</param>
+			</result>
+		</action>
+		
+		<action name="showSubSequenceMapExtractionResult" class="web.action.SubSequenceMapExtractionResult">
+			<result name="success">/pages/phyloAnalysis/subSequenceMapExtractionResult.jsp</result>
+		</action>
+
+	</package>
+
+
+</struts>
+

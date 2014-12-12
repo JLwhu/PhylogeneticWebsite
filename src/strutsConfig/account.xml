@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="account" extends="struts-default">
+        <action name="login" class="web.action.LoginAction">
+            <result type="redirect">/pages/include/index.jsp</result>
+            <result name="input">/pages/include/index.jsp</result>
+        </action>
+
+        <action name="register" class="web.action.RegisterAction">
+            <result type="redirect">/</result>
+            <result name="input">/pages/register.jsp</result>
+        </action>
+
+        <action name="logout" class="web.action.LogoutAction">
+            <result type="redirect">/</result>
+        </action>
+        
+        
+        
+       <action name="loginAction"
+			class="web.action.LogManageAction" method="loginAction">
+			<result name="MainIndex">/pages/include/index.jsp</result>
+			<result name="operator">/pages/include/operatorindex.jsp</result>
+			<result name="error">/pages/index.jsp</result>
+		</action>
+		<action name="logoutAction"
+			class="web.action.LogManageAction" method="logoutAction">
+			<result>/pages/index.jsp</result>
+		</action>
+    </package>
+</struts>

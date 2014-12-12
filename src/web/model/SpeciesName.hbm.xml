@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 31, 2013 9:34:05 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="web.model.SpeciesName" table="SPECIESNAME">
+        <id name="speciesid" type="java.lang.Integer">
+            <column name="SPECIESID" />
+            <generator class="assigned" />
+        </id>
+        <property name="genus" type="java.lang.String">
+            <column name="GENUS" />
+        </property>
+        <property name="scientificName" type="java.lang.String">
+            <column name="SCIENTIFICNAME" />
+        </property>
+        <property name="commonName" type="java.lang.String">
+            <column name="COMMONNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

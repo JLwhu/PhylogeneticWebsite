@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="googleView" extends="struts-default">
+		<global-results>
+			<result name="error">/pages/include/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="SystemException"
+				result="error" />
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+		<action name="showHotspot" class="web.action.HotSpotAction"
+			method="getHotspotbyLocid">
+			<result>/pages/googleMap/googleMapView.jsp</result>
+			<result name="input">pages/googleMap/googleMapView.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">showResultOnGoogleMap</param>
+				<param name="lat">${lat}</param>
+				<param name="lng">${lng}</param>
+			</result>
+		</action>
+		<action name="showResultOnGoogleMap" class="web.action.HotSpotAction">
+			<result name="success">/pages/googleMap/googleMapView.jsp</result>
+		</action>
+		
+		<action name="subtreeMap" class="web.action.SubtreeOnMapAction"
+			method="subtreeExtraction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showSubtreeResult</param>
+				<param name="outFileName">${outFileName}</param>
+				<param name="outputPath">${outputPath}</param>
+				<param name="subTreeImageFileName">${subTreeImageFileName}</param>
+				<param name="subTreeDiversity">${subTreeDiversity}</param>
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/pages/include/error.jsp</param>
+				<param name="errMsg">${errMsg}</param>
+			</result>
+		</action>
+		<action name="showSubtreeResult" class="web.action.SubtreeResultAction">
+			<result name="success">/pages/googleMap/speciesTreeOnMap.jsp</result>
+		</action>
+	</package>
+
+	<package name="googleJson" namespace="/" extends="json-default">
+		<global-results>
+			<result name="error">/pages/include/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="SystemException"
+				result="error" />
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+	<action name="autoYears" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotYearList">
+		<result type="json">
+			<param name="root">years</param>
+		</result>
+	</action>
+	
+	<action name="autoNames" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesScientificNameList">
+		<result type="json">
+			<param name="root">names</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByYear" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByYear">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByMonth" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByMonthRange">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByYearMonth" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByYearMonth">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByPeriod" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByPeriod">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByLocation" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByLocation">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+
+	<action name="speciesSpotRecordJsonByYearLocation" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByYearLocation">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByMonthLocation" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByMonthLocation">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+
+	<action name="speciesSpotRecordJsonByYearMonthLocation" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByYearMonthLocation">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonByPeriodLocation" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordByPeriodLocation">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+	
+	<action name="speciesSpotRecordJsonBySpeciesid" class="web.action.SpeciesRecordMapAction"
+		method="getSpeciesSpotRecordBySpeciesid">
+		<result type="json">
+			<param name="root">resultJSON</param>
+		</result>
+	</action>
+</package> 
+ 
+
+</struts>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 31, 2013 9:34:05 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="web.model.SpeciesSpotRecord" table="SPECIESSPOTRECORD1">
+        <id name="recordid" type="java.lang.Integer">
+            <column name="RECORDID" />
+            <generator class="assigned" />
+        </id>
+    <!--   <property name="speciesid" type="java.lang.Integer">
+            <column name="SPECIESID" />
+        </property> -->
+        <!--  <many-to-one name="speciesName" class="web.model.SpeciesName" access="field" fetch="join" >
+            <column name="SPECIESID"  />
+        </many-to-one> -->
+        <many-to-one name="speciesName" 
+             class="web.model.SpeciesName"
+             column="SPECIESID"
+             cascade="none"
+             lazy ="false">
+	</many-to-one>
+        <property name="lat" type="double">
+            <column name="LAT" />
+        </property>
+        <property name="lng" type="double">
+            <column name="LNG" />
+        </property>
+        <property name="spotDate" type="java.util.Date">
+            <column name="SPOTDATE" />
+        </property>
+        <property name="abundance" type="java.lang.Integer">
+            <column name="ABUNDANCE" />
+        </property>
+     <!--      <many-to-one name="sn" class="web.model.SpeciesName" access="field" fetch="join">
+            <column name="SN" />
+        </many-to-one> -->
+    </class>
+</hibernate-mapping>

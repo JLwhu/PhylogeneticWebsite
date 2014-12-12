@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 18, 2013 1:23:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="web.model.Role" table="ROLE">
+		<id name="roleid" type="java.lang.Integer">
+			<column name="ROLEID" />
+			<generator class="assigned" />
+		</id>
+		<property name="rolename" type="java.lang.String">
+			<column name="ROLENAME" />
+		</property>
+		<property name="roledesc" type="java.lang.String">
+			<column name="ROLEDESC" />
+		</property>
+		<property name="isdefault" type="java.lang.String">
+			<column name="ISDEFAULT" />
+		</property>
+		<set name="storusers" table="usertorole" lazy="false" cascade="none">
+			<key column="roleid"></key>
+			<many-to-many class="web.model.User" column="USERID">
+			</many-to-many>
+		</set>
+		<set name="stormenus" table="roletomenu" lazy="false" cascade="none">
+			<key column="roleid"></key>
+			<many-to-many class="web.model.Menu" column="MenuId">
+			</many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>
