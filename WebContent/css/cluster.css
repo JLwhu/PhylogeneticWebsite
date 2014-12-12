@@ -1,0 +1,68 @@
+/* Cluster */
+.maptimize_cluster_0, .mapeed_cluster_0, .maptimize_cluster_1, .mapeed_cluster_1, .maptimize_cluster_2, .mapeed_cluster_2, .maptimize_cluster_3, .mapeed_cluster_3, .maptimize_cluster_4, .mapeed_cluster_4 {
+  font-weight: bold;
+  text-align:center;  
+  cursor: pointer;
+  color:#FFFFFF;
+  font-size:11px;
+  font-family: arial;
+}
+
+.maptimize_cluster_0, .mapeed_cluster_0 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.maptimize_cluster_1, .mapeed_cluster_1 {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  margin: 0 0 0 1px;
+}
+
+.maptimize_cluster_2, .mapeed_cluster_2 {
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
+  margin: 1px 0 0 0;
+}
+
+.maptimize_cluster_3, .mapeed_cluster_3 {
+  width: 71px;
+  height: 71px;
+  line-height: 71px;
+}
+
+.maptimize_cluster_4, .mapeed_cluster_4 {
+  width: 82px;
+  height: 82px;
+  line-height: 82px;
+  margin:3px 0 0 2px;
+}
+
+.maptimize_marker_0, .maptimize_marker_1, .maptimize_marker_2, .maptimize_marker_3 {
+  font-weight: bold;
+  text-align:center;  
+  cursor: pointer;
+  color:#FFFFFF;
+  font-size:11px;
+  font-family: arial;
+  margin-top:-2px;
+}
+
+.maptimize_marker_0 {
+  width: 25px;
+}
+
+.maptimize_marker_1 {
+  width: 25px;
+}
+
+.maptimize_marker_2 {
+  width: 29px;
+}
+
+.maptimize_marker_3 {
+  width: 33px;
+}

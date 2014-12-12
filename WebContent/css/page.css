@@ -1,0 +1,553 @@
+/**
+ * 查询结果列表样式： listTab;
+ * 
+ */
+#search {
+	width: 100%;
+	margin: 0;
+}
+#sortTable TBODY tr
+{
+	star : expression(onmouseover = function(){this.style.backgroundColor='#FFFFBF'}, onmouseout = function() {
+		this.style.backgroundColor= (this.sectionRowIndex % 2 == 1)?"#FAFAFA":"#FFFFFF";
+		});
+	background-color: expression(( this . sectionRowIndex % 2 == 1) ?
+		"#FAFAFA" : "#FFFFFF");
+	
+	color: #000000;
+}
+.subtitle2 {
+	border-bottom: solid 0px #999999;
+	border-top: solid 0px #999999;
+	font-weight: bold;
+	padding-left: 0.5em;
+	color: #FF6600;
+	LINE-HEIGHT: 200%;
+	text-align: left;
+	word-break: break-all;
+	background-position: top;
+	background-image: url("page/menu_bg.gif");
+}
+.favTreeNode {
+	border: 0px;
+	position:absolute;
+	clip: rect(1 12 12 1);
+	*clip: rect(5 16 16 5);
+}
+
+.mainTab {
+	width: 100%;
+	margin-left: 0px;
+	border-collapse: collapse;
+}
+.mainTitle {
+	padding-left: 10px;
+}
+
+table.listTab {
+	width: 100%;
+	margin-left: 0px;
+	border-collapse: collapse;
+}
+
+table.listTab TBODY tr {
+	star : expression(onmouseover = function(){this.style.backgroundColor='#EAEAEA'}, onmouseout = function() {
+		this.style.backgroundColor= (this.sectionRowIndex % 2 == 1)?"#FAFAFA":"#FFFFFF";
+		});
+	background-color: expression(( this . sectionRowIndex % 2 == 1) ?
+		"#FAFAFA" : "#FFFFFF");
+	
+	color: #000000;
+	height: 20px;
+}
+
+table.listTab TBODY td {
+	border-top: double 1px #cccccc;
+	color: #000000;
+	line-height: 18px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	height: 18px;
+}
+
+/** 用与listTab外层套用的div **/
+.list {
+	/*height: 395px;*/
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+	line-height:1px;
+	overflow: auto;
+	width: 100%;
+}
+
+/** 用与listTab外层套用的div **/
+.popwindow {
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+	line-height:1px;
+	overflow: auto;
+	width: 100%;
+}
+
+table.listTab THEAD tr {
+	background-image: url("images/bgtg.gif");
+	color: #000000;
+	height: 30px;
+}
+
+/** 用于排序的表格第一列TD **/
+table.listTab THEAD td {
+	font-family: "宋体";
+	font-size: 14px;
+	LINE-HEIGHT: 150%;
+	background-position: bottom;
+	border-bottom: solid 1px #CCCCCC;
+	border-top: solid 1px #CCCCCC;
+	cursor: pointer;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color: #585858;
+    font-weight: bold;
+}
+
+.listTD {
+	LINE-HEIGHT: 150%;
+	color: #444444;
+	font-weight: bolder;
+	background-image: url("common/bgGray.gif");
+	background-position: bottom;
+	border-bottom: double 1px #CCCCCC;
+	cursor: pointer;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+/**
+ * 分页标头样式： headpage
+ * 使用方法：
+ * <div class="headpage">
+ *    共8页...
+ * </div>
+ */
+.headpage {
+	width: 99%;
+	height:20px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #FAFAFA;
+	
+	text-align: right;
+}
+
+/**
+ * 编辑表格
+ * 用于用户输入表单格式
+ */
+table.editTab {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+table.editTab th {
+	LINE-HEIGHT: 150%;
+	color: #444444;
+	font-weight: bolder;
+	
+	background-image: url("common/bgGray.gif");
+	background-position: bottom;
+	border-bottom: double 1px #CCCCCC;
+}
+
+table.editTab tr {
+	
+	color: #000000;
+	text-align: center;
+}
+
+table.editTab td {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	
+	line-height: 18px;
+	word-break: break-all;
+	height: 30px;
+}
+
+.tbl_title{
+	padding-left: 0.3em;
+	line-height: 18px;
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	/* **end** */	
+	text-align: left;
+	color: #FF6600;
+	font-weight: bolder;
+}
+
+/** 编辑表单标题样式 **/
+.tdLabel {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	
+	line-height: 18px;
+	padding-right: 0.5em;
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	/* **end** */	
+	text-align: right;
+	word-break: break-all;
+	width:10%;
+	background-color: #F6F6F6;
+}
+
+.tdLabel_big {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	
+	line-height: 18px;
+	padding-right: 0.5em;
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	/* **end** */
+	text-align: right;
+	word-break: break-all;
+	width:15%;
+	background-color: #F6F6F6;
+}
+.tdLabel_td {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	
+	line-height: 18px;
+	padding-right: 0.5em;
+	text-align: left;
+	word-break: break-all;
+	width:20%;
+	background-color: #F6F6F6;
+}
+
+/** 编辑输入表单样式 **/
+.tdInput {
+	border-top: solid 1px #D4D0C8;
+	border-bottom: solid 1px #D4D0C8;
+	
+	padding-left: 0.5em;
+	line-height: 18px;
+	text-align: left;
+	width:40%;
+	word-break: break-all;
+}
+
+/** 编辑表单标题样式2(居中对齐) **/
+.tdLabel2 {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;	
+	line-height: 18px;
+	padding-right: 0.5em;
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	/* **end** */	
+	text-align: center;
+	word-break: break-all;
+	width:20%;
+	background-color: #F6F6F6;
+}
+
+/** 编辑输入表单样式2(居中对齐)**/
+.tdInput2 {
+	border-top: solid 1px #D4D0C8;
+	border-bottom: solid 1px #D4D0C8;
+	
+	padding-left: 0.5em;
+	line-height: 18px;
+	text-align: center;
+	width:30%;
+	word-break: break-all;
+}
+
+/** 编辑输入表单样式 **/
+.tdInputFS {
+	border-top: solid 1px #D4D0C8;
+	border-bottom: solid 1px #D4D0C8;
+	
+	padding-left: 0.5em;
+	line-height: 18px;
+	text-align: left;
+	width:80%;
+	word-break: break-all;
+}
+
+/** 编辑输入表单样式 **/
+.tdInputFS2 {
+	border-top: solid 1px #D4D0C8;
+	border-bottom: solid 1px #D4D0C8;
+	padding-left: 0.5em;
+	line-height: 18px;
+	text-align: center;
+	width:80%;
+	word-break: break-all;
+}
+/** 编辑输入表单样式(不限定长度) **/
+.tdLabel3 {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	
+	line-height: 18px;
+	padding-right: 0.5em;
+	text-align: right;
+	word-break: break-all;
+	background-color: #F6F6F6;
+}
+
+/** 编辑输入表单样式(不限定长度) **/
+.tdInput3 {
+	border-top: solid 1px #D4D0C8;
+	border-bottom: solid 1px #D4D0C8;
+	
+	padding-left: 0.5em;
+	line-height: 18px;
+	text-align: left;
+	word-break: break-all;
+}
+
+.minWidth{
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	word-break: keep-all;
+	/* **end** */
+}
+/** 编辑输入表单样式(不限定长度，不限定文本位置) **/
+.tdLabel4 {
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	/* **end** */	
+	line-height: 18px;
+	padding-right: 0.5em;
+	word-break: break-all;
+	background-color: #F6F6F6;
+}
+
+/** 标题样式 **/
+.title {
+	border-top: solid 0px #999999;
+	font-weight: bold;
+	padding-left: 1.5em;
+	margin-top: 1px;
+	color: #FF6600;
+	LINE-HEIGHT: 220%;
+	text-align: left;
+	/*add by maoying*/
+	overflow: visible;/*注意不要写在最后了*/ 
+	white-space: nowrap;
+	/* **end** */	
+	//text-shadow: 2px 2px 2px #000;
+	word-break: break-all;
+	background: #FFFFFF url("page/titlebg.gif") left no-repeat ;
+}
+
+/** 子标题样式 **/
+.subtitle {
+	border-top:1px solid #ABC3D7;
+	border-bottom:1px solid #ABC3D7;
+	font-weight: bold;
+	padding-left: 0.5em;
+	color: #FF6600;
+	LINE-HEIGHT: 200%;
+	text-align: left;
+	word-break: break-all;
+	background-position: top;
+	background-image: url("common/bgGray.gif");
+
+}
+
+/** error 错误提示样式，required 必填选项样式，用于*号， warning 提示信息样式 **/
+.error, .required, .warning {
+	padding-left: 0.3em;
+	line-height: 18px;
+	text-align: left;
+	color: #FF6600;
+	word-break: break-all;
+}
+
+/**用于设置表单宽度, normal: 95%宽度, larger: 98%宽度, largest 100%宽度**/
+.normal {
+	width: 95%;
+	margin-left: 5%;
+}
+
+.larger {
+	width: 98%;
+	margin-left: 2%;
+}
+
+.largest {
+	width: 100%;
+	margin-left: 0%;
+	margin-top: 10px;
+}
+.wwFormTable {
+	width: 100%;
+	margin-left: 0%;
+}
+
+
+/** 按钮样式div **/
+.submit {
+	background-color: #FFFFFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: left;
+}
+
+/** 按钮样式div **/
+.submitEdit1 {
+	background-color: #FFFFFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+	/*position: absolute;*/
+	bottom: 0px;
+	width: 100%;
+}
+.submitEdit {
+	background-color: #FFFFFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+/** 查询按钮样式 **/
+.query {
+	/*background-color: #FFFFFF;*/
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: right;
+	margin-right: 70px;
+}
+
+.char {
+	width: auto;
+	text-align: left;
+	padding-left: 1em;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	/*behavior:url(../css/tdList.htc);*/
+}
+
+.longchar {
+	width :200px;
+	text-align: left;
+	padding-left: 1em;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	/*behavior:url(../css/tdList.htc);*/
+}
+
+.digit {
+	text-align: right;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	/*behavior:url(../css/tdList.htc);*/
+}
+
+.text {
+	text-align: center;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	/*behavior:url(../css/tdList.htc);*/
+}
+
+.hide {
+	display: block;
+	position:absolute;
+ 	top:6px;
+	right:0px;
+	text-align:right;
+	background-color: transparent;
+}
+
+.InputDate {
+	/*behavior:url(../../../css/Date.htc);*/
+}
+
+.text1 {
+	text-align: center;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color:red;
+	/*behavior:url(../../../css/tdList.htc);*/
+}
+
+.text2 {
+	text-align: center;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color:green;
+	/*behavior:url(../../../css/tdList.htc);*/
+}
+
+.text3 {
+	text-align: center;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color:blue;
+	/*behavior:url(../../../css/tdList.htc);*/
+}
+
+/************20100902 huangqi add*****************/
+.table_from02_tdimage01{
+	height:30px;
+	border-left:1px solid #cdcdcd;
+	border-right:1px solid #cdcdcd;
+	border-top:1px solid #cdcdcd;
+}
+
+.table_from02_tdimage01{
+	height:30px;
+	border-left:1px solid #cdcdcd;
+	border-right:1px solid #cdcdcd;
+	border-top:1px solid #cdcdcd;
+}
+
+.table_form_btl{
+	height:30px;
+	border-left:1px solid #AEC2CD;
+	border-right:1px solid #AEC2CD;
+	border-top:1px solid #AEC2CD;
+}
+
+.table_from01_div{
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:100% !important;
+	width:98.5%;
+}
+
+.table_from_ok002{
+	border-collapse: collapse;
+	margin-top:20px;
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+.query-label-120{
+	display:inline-block;
+	text-align: right;
+	width:120px;	
+}
+.select130{
+	width:130px;
+}

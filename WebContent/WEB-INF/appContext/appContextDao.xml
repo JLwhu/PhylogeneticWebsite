@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="hotspotDao"
+		class="web.dao.impl.HotspotDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="speciesSpotRecordDao"
+		class="web.dao.impl.SpeciesSpotRecordDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="speciesNameDao"
+		class="web.dao.impl.SpeciesNameDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="userDao"
+		class="web.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="logManageDao"
+		class="web.dao.impl.LogManageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="menuMgmtDao"
+		class="web.dao.impl.MenuMgmtDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="roleMgmtDao"
+		class="web.dao.impl.RoleMgmtDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="sysLogDao"
+		class="web.dao.impl.SysLogDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+</beans>

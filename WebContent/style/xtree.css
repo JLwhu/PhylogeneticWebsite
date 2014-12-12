@@ -1,0 +1,69 @@
+body
+{
+	background-color:#ffffff;
+	font-family:Verdana Arial 宋体;
+	font-size:12px;
+	height:12px;
+	margin-left:3px;
+	border:0px solid #E0E0E0;
+	padding:1 2;
+	overflow:auto;	
+	cursor:default;
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: 宋体,arial
+}
+.xtree
+{
+	behavior:url(../style/xtree.htc);
+	padding:0px;
+}
+.TreeNode
+{
+	height:10px;
+}
+.TreeNode input
+{
+	margin:0;
+	padding:0;
+	position:relative;
+	top:-2px;
+}
+.TreeNode img
+{
+	cursor:hand;
+}
+.TreeNode span
+{
+	font-family:Verdana Arial 宋体;
+	font-size:12px;
+	height:10px;
+	margin-left:3px;
+	padding:1 2;
+	cursor:default
+}
+.TreeNode span a
+{
+	color:#000000;
+	text-decoration:none
+}
+span.MouseOver
+{	
+	color:#00ff000;
+}
+span.HighLight
+{
+	color:#000000;
+}
+
+
+span.loading
+{
+	margin:-3px -4px;
+	color:#888888;
+}
+.container
+{
+	padding-left:10;
+	height:10;
+}

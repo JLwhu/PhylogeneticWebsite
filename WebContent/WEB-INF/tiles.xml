@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/BaseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/Header.jsp" />
+		<put-attribute name="menu" value="/Menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/Footer.jsp" />
+	</definition>
+
+	<definition name="/welcome.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/Welcome.jsp" />
+	</definition>
+
+	<definition name="/customer.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Customer Form" />
+		<put-attribute name="body" value="/Customer.jsp" />
+	</definition>
+	<definition name="/customer.success.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Customer Added" />
+		<put-attribute name="body" value="/SuccessCustomer.jsp" />
+	</definition>
+	<definition name="/ajaxdemo.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Struts 2 Ajax Demo" />
+		<put-attribute name="body" value="/AjaxDemo.jsp" />
+	</definition>
+
+</tiles-definitions>
