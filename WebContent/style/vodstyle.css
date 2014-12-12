@@ -1,0 +1,16 @@
+table.sortable thead {
+    background: #fcf1be;
+	font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	text-align: center;
+	padding: 1px;
+	border-bottom: 2px solid #ccc;
+	
+}
+.odd{
+	background-color: #ffffff;
+}
+
+.even{
+	background-color: #E1E1E1;
+}

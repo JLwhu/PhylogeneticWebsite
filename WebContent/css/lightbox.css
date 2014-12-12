@@ -1,0 +1,34 @@
+/**
+	lightbox.css
+	For use with lightbox.js.
+	@author beansoft
+	@version 2006-05-04
+ */
+.lightbox {
+	color: #333;
+	vertical-align: center;
+	position: absolute;
+	top: 25%;
+	left: 10px;
+	width: 80%;
+	/**height: 50%;*/
+	border: 2px solid #B8B8B8;
+	background-color: white;
+	text-align: left;
+	z-index:1001;
+	overflow: none;/** No scroll bar */
+}
+
+.overlay{
+	display: none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:1000;
+	background-color:#333;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}

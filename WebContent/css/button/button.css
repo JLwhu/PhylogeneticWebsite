@@ -1,0 +1,18 @@
+/*cssButton定义*/
+.cssButton{height:30px;float:left;margin:0 5px 0 0;cursor:pointer;font-size:12px;}
+.cssButton input{height:30px;border:none;padding:0 8px 0 0;margin:0 0 0 8px;cursor:pointer;}
+.cssButton span{padding:7px 8px 7px 0;margin:0 0 0 8px;float:left;height:16px;}
+
+/*橘红*/
+.hyacinth{background:url(hyacinth.gif) left 0;color:#fff;text-decoration:none;}
+.hyacinth input,.hyacinth span{background:url(hyacinth.gif) right 0;color:#fff;}
+.hyacinth:hover{background:url(hyacinth.gif) left -30px;}
+.hyacinth:hover span{background:url(hyacinth.gif) right -30px;color:#000;}
+.hyacinth:hover input{background:url(hyacinth.gif) right -30px;color:#000;}
+
+/*海蓝*/
+.seablue{background:url(seablue.gif) left 0;color:#fff;text-decoration:none;}
+.seablue input,.seablue span{background:url(seablue.gif) right 0;color:#fff;}
+.seablue:hover{background:url(seablue.gif) left -30px;}
+.seablue:hover span{background:url(seablue.gif) right -30px;color:#000;}
+.seablue:hover input{background:url(seablue.gif) right -30px;color:#000;}

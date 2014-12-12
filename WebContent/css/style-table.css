@@ -1,0 +1,20 @@
+.topline {
+	color: #e1e2e3;
+	font-size: 16px;
+	font-weight: bold;
+}
+.firstline {
+	color: #344b50;
+	font-size: 16px;
+	bgcolor:#FFFFFF;
+}
+
+.cellline {
+	color: #344b50;
+	font-size: 14px;
+	bgcolor:#FFFFFF;
+}
+.bottomline {
+	font-size: 14px;
+	color: #3b6375;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<!-- 系统用户管理start -->
+	<bean id="userService"
+		class="web.service.impl.UserServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="userDao" ref="userDao" />
+	</bean>
+
+	<bean id="logManageService"
+		class="web.service.impl.LogManageServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="logManageDao" ref="logManageDao" />
+	</bean>
+	
+	<bean id="menuMgmtService"
+		class="web.service.impl.MenuMgmtServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="menuMgmtDao" ref="menuMgmtDao" />
+	</bean>
+	
+	<bean id="roleMgmtServcie"
+		class="web.service.impl.RoleMgmtServcieImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="roleMgmtDao" ref="roleMgmtDao" />
+	</bean>
+	
+	<bean id="sysLogService"
+		class="web.service.impl.SysLogServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="sysLogDao" ref="sysLogDao" />
+	</bean>
+	
+	
+		<!-- Phologenetics Services -->	
+	<bean id="hotspotService"
+		class="web.service.impl.HotspotServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="hotspotDao" ref="hotspotDao" />
+	</bean>
+	
+		
+	<bean id="speciesSpotRecordService"
+		class="web.service.impl.SpeciesSpotRecordServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="speciesSpotRecordDao" ref="speciesSpotRecordDao" />
+	</bean>
+	
+
+	<!--<bean id="subtreeExtractionService"
+		class="web.service.impl.SubtreeExtractionServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="speciesNameDao" ref="speciesNameDao" />
+	</bean>-->
+	
+	
+	
+	<bean id="speciesNameService"
+		class="web.service.impl.SpeciesNameServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+		<property name="speciesNameDao" ref="speciesNameDao" />
+	</bean>
+	
+	<bean id="subSequenceMapExtractionService"
+		class="web.service.impl.SubSequenceMapExtractionServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+	</bean>
+	
+	<bean id="subtreeExtractionService"
+		class="web.service.impl.SubtreeExtractionServiceImpl"
+		abstract="false" lazy-init="default" dependency-check="default">
+	</bean>
+	
+
+
+	
+</beans>
+

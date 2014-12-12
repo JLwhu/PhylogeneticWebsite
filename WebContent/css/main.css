@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a,img,ul,li {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	border: 0;
+}
+
+ul,li {
+	list-style: none;
+}
+
+.btn_64,.btn_64_on {
+	width: 64px;
+	height: 22px;
+	border: none;
+	cursor: pointer;
+	background-image: url(button/btn_64.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.btn_90,.btn_90_on {
+	width: 90px;
+	height: 22px;
+	border: none;
+	background: url(button/btn_90.gif) no-repeat 0 0;
+	cursor: pointer;
+}
+
+.btn_64:hover,.btn_90:hover,.btn_64_on,.btn_90_on {
+	background-position: 0 -22px;
+	color: #FFF;
+}
+
+.footer {
+	height: 20px;
+	padding: 0 10px;
+	background: #9EB2BB;
+	color: #FFF;
+	
+	text-align: left;
+	line-height: 20px;
+}
+
+IMG {
+	cursor: pointer;
+}
+
+TEXTAREA {
+	width: 78%;
+}
+
+.table_text_search {
+	width: 100%;
+	border: 0;
+	padding: 0;
+}
+
+.table_text_search input[type="text"] {
+	padding: 0;
+	width: 100%;
+	
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	height:22px;
+}
+
+.table_text_search input {
+	padding: expression(this.type == "text" ?   "0" : "style");
+	width: expression(this.type == "text" ?   "100%" : "style");
+	height: expression(this.type == "text" ?   "22px" : "style");
+	font-size: expression(this.type == "text" ?   "13px" : "style");
+	border: expression(this.type == "text" ?   "1px solid #CCC" : "style");
+	background-color: expression(this.type == "text" ?   "#FFF" : "style");
+}
+
+.table_text_search select {
+	width: 100%;
+}
+
+.table_text {
+	width: 100%;
+	border: 0;
+	padding: 0;
+}
+
+.table_text input[type="text"] {
+	padding: 0;
+	width: 50%;
+	
+	
+	background-color: #FFF;
+	height: 22px;
+}
+
+.table_text input {
+	padding: expression(this.type == "text" ?   "0" : "style");
+	width: expression(this.type == "text" ?   "50%" : "style");
+	height: expression(this.type == "text" ?   "22px" : "style");
+	font-size: expression(this.type == "text" ?   "13px" : "style");
+	border: expression(this.type == "text" ?   "1px solid #CCC" : "style");
+	background-color: expression(this.type == "text" ?   "#FFF" : "style");
+}
+
+.table_text select {
+	width: 50%;
+}
+
+.password {
+	padding: 0;
+	width: 50%;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+}
+
+.midtext{
+	position:absolute;
+	left:50%;top:50%;
+	margin:-50px 0 0 -50px;
+	padding-left:20px; 
+	color:#333399; 
+	font-weight:bolder; 
+	background-color: #eeeeee; 
+	height: 30px;
+}

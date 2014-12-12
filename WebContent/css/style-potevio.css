@@ -1,0 +1,49 @@
+body {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background: url(../images/login_05.gif) repeat-x #112937;
+	font-size: 14px;
+	color: #112937;
+}
+
+INPUT {
+	width:120px;
+	height:22px;
+	background-color:#87adbf;
+	border:solid 1px #153966;
+	font-size:13px;
+	color:#283439;
+}
+.chknumber_input {
+	width:65px;
+}
+.user {
+	margin: 6px auto;
+	font-size:14px;
+	font-weight:bold;
+	color:#a4bbcd;
+}
+/* IE7 HACK*/
+*+html .user {
+	margin: 4px auto;
+}
+/* END HACK*/
+.chknumber {
+	font-size:14px;
+	font-weight:bold;
+	color:#a4bbcd;
+	margin-bottom:3px;
+	
+}
+.button {
+	margin: 15px auto;
+}
+IMG {
+	border:none;
+	cursor:pointer;
+}
+FORM {
+	margin:0;
+	padding:0
+}
