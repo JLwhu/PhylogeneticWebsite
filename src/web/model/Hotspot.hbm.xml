@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 18, 2013 1:23:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="web.model.Hotspot" table="HOTSPOT">
+        <id name="locid" type="java.lang.String">
+            <column name="LOCID" />
+            <generator class="assigned" />
+        </id>
+        <property name="countrycode" type="java.lang.String">
+            <column name="COUNTRYCODE" />
+        </property>
+        <property name="subnational1code" type="java.lang.String">
+            <column name="SUBNATIONAL1CODE" />
+        </property>
+        <property name="subnational2code" type="java.lang.String">
+            <column name="SUBNATIONAL2CODE" />
+        </property>
+        <property name="lat" type="java.lang.String">
+            <column name="LAT" />
+        </property>
+        <property name="lng" type="java.lang.String">
+            <column name="LNG" />
+        </property>
+        <property name="locname" type="java.lang.String">
+            <column name="LOCNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<!DOCTYPE validators PUBLIC
+"-//OpenSymphony Group//XWork Validator 1.0//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+    <field name="species.scientificName">
+        <field-validator type="requiredstring">
+            <message>Scientific name is required!</message>
+        </field-validator>
+    </field>
+    <field name="species.commonName">
+        <field-validator type="requiredstring">
+            <message>Common name is required!</message>
+        </field-validator>
+    </field>
+</validators>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 18, 2013 1:23:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="web.model.User" table="USER">
+        <id name="userid" type="java.lang.Integer">
+            <column name="USERID" />
+            <generator class="increment" />
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="phonenumber" type="java.lang.String">
+            <column name="PHONENUMBER" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <set name="storroles" table="usertorole" lazy="false" cascade="none">
+        <key column="USERID"></key>
+         <many-to-many class="web.model.Role" column="roleid">
+         </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
