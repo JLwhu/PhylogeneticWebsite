@@ -56,19 +56,19 @@ $(function(){
        		//alert(errorMsg);
        		switch (errorMsg) {
        		case "2020":
-       			$('#message').html("短时间内上传次数过多...");
+       			$('#message').html("Upload too many times in a short time...");
        			break;
        		case "2121":
-       			$('#message').html("达到每天上传上限...");
+       			$('#message').html("Reached user's upload limit in a day...");
        			break;
        		case "2222":
-       			$('#message').html("达到服务器上传上限...");
+       			$('#message').html("Reached server's upload limit in a day...");
        			break;
        		case "2323":
-       			$('#message').html("上传文件失败...");
+       			$('#message').html("Upload file failed...");
        			break;
        		case "2424":
-       			$('#message').html("上传文件失败，请检查文档类型...");
+       			$('#message').html("Anlysize file failed, please check out file's type...");
        			break;
        		}
        		
